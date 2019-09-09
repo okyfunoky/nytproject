@@ -71,4 +71,11 @@ function parseData(article){
 
 }
 
+$("#find-movie").on("click", function (event) {});
+$("#search-button").on("click", function (event) {
+    $("#search-term").preventDefault();
+    event.preventDefault();
+    var searchTerm = $('#search-term').val();
+    console.log("some content:" + searchTerm);
+});
 
