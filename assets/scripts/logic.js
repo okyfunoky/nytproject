@@ -70,12 +70,13 @@ function parseData(article){
 
 
 }
+console.log("some content:" + searchTerm);
 
-$("#find-movie").on("click", function (event) {});
-$("#search-button").on("click", function (event) {
-    $("#search-term").preventDefault();
+$("#search-form").on("submit", function (event) {
+    
     event.preventDefault();
     var searchTerm = $('#search-term').val();
+
     console.log("some content:" + searchTerm);
 });
 
