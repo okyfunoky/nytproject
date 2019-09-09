@@ -35,5 +35,19 @@ function constructUrl(searchTerm, resultCount, yearStart, yearEnd){
     return baseUrl;
 }
 
-// var test = constructUrl("boris+johnson",5,"20120101","20121231");
-// console.log(test);
+function callNYTAPI(queryURL){
+    
+    
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
+        console.log(queryURL);
+        console.log(response);
+      });
+}
+
+var newSearchUrl = constructUrl("france",5,"20120101","20121231");
+callNYTAPI(newSearchUrl);
+
+
