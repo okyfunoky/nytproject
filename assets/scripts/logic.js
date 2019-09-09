@@ -60,10 +60,15 @@ callNYTAPI(newSearchUrl);
 // parse information... new function that parses information
 // we have agreed to send back two pieces of data, the title and the date
 function parseData(article){
-    var title = article.headline.main
-    var date = "2012"
+    var title = article.headline.main;
+    var date = "2012";
+
+    // $('#articlerespository').text(title);
 
     
+
+
+
 }
 
 
