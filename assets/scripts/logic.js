@@ -44,10 +44,26 @@ function callNYTAPI(queryURL){
       }).then(function (response) {
         console.log(queryURL);
         console.log(response);
+        // this build a loop that says to do this action for every item
+        // this is a for each loop
+        response.response.docs.forEach(article => {
+            // console.log(article.headline.main)
+            parseData(article)
+        });
+    
       });
 }
 
 var newSearchUrl = constructUrl("france",5,"20120101","20121231");
 callNYTAPI(newSearchUrl);
+
+// parse information... new function that parses information
+// we have agreed to send back two pieces of data, the title and the date
+function parseData(article){
+    var title = article.headline.main
+    var date = "2012"
+
+    
+}
 
 
